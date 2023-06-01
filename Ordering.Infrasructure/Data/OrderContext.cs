@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿ using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace Ordering.Infrasructure.Data
 {
     public class OrderContext : DbContext
     {
-        protected OrderContext(DbContextOptions<OrderContext> options):base(options) 
+        public OrderContext(DbContextOptions<OrderContext> options):base(options) 
         {
 
         }

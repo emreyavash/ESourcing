@@ -3,8 +3,13 @@ version: '3.4'
 services:
   sourcingdb:
     image: mongo
+
   rabbitmq:
     image: rabbitmq:3-management
+
+  sourcingsqldb:
+    image: mcr.microsoft.com/mssql/server
+
   products:
     image: ${DOCKER_REGISTRY-}products
     build:
@@ -16,4 +21,11 @@ services:
     build:
       context: .
       dockerfile: Esourcing.Sourcing/Dockerfile
+
+
+  esourcing.orders:
+    image: ${DOCKER_REGISTRY-}esourcingorders
+    build:
+      context: .
+      dockerfile: ESourcing.Orders/Dockerfile
 
