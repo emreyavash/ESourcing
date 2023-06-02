@@ -18,7 +18,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddInfrasructure(builder.Configuration);
 builder.Services.AddApplication();
-
+builder.Services.AddAutoMapper(typeof(Program));
 #region Eventbus
 builder.Services.AddSingleton<IRabbitMQPersistentConnection>(sp =>
 {

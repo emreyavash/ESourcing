@@ -11,7 +11,7 @@ namespace ESourcing.Orders.Extensions
             var life = app.ApplicationServices.GetService<IHostApplicationLifetime>();
 
             life.ApplicationStarted.Register(OnStarted);
-            life.ApplicationStarted.Register(OnStopping);
+            life.ApplicationStopping.Register(OnStopping);
 
             return app;
         }
